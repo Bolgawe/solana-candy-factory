@@ -38,7 +38,7 @@ const Home = () => {
           alt="Candy Image" />
 
         <span className="text-gray-800 font-bold text-2xl cursor-default">
-          THIS IS THE BEST CANDY MACHINE EVER
+          Matthew's Candy Machine Mint Site
         </span>
 
         {!wallet.connected && <span
@@ -59,8 +59,8 @@ const Home = () => {
 
         <div className="flex flex-col justify-start items-start">
           {wallet.connected &&
-            <RecaptchaButton
-              actionName="mint"
+            <button
+              type="button"
               disabled={isSoldOut || isMinting || !isActive}
               onClick={onMint}
             >
@@ -75,12 +75,11 @@ const Home = () => {
                   renderer={renderCounter}
                 />
               }
-            </RecaptchaButton>
+            </button>
           }
 
           {wallet.connected &&
-            <RecaptchaButton
-              actionName="mint5"
+            <button
               disabled={isSoldOut || isMinting || !isActive}
               onClick={() => onMintMultiple(5)}
             >
@@ -95,7 +94,7 @@ const Home = () => {
                   renderer={renderCounter}
                 />
               }
-            </RecaptchaButton>
+            </button>
           }
         </div>
         <Footer />
