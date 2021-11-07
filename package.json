@@ -19,6 +19,7 @@
     "setup-metaplex-main": "node ./devtools/main/setup-metaplex-main.js",
     "setup-envs-main": "node ./devtools/main/setup-envs-main.js",
     "deploy-mainnet": "yarn setup-solana-main && yarn setup-metaplex-main && yarn setup-envs-main",
+    "predeploy": "yarn run build",
     "deploy": "gh-pages -d build"
   },
   "dependencies": {
